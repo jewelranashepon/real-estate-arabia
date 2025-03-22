@@ -1,12 +1,13 @@
 // middleware.ts
-import { withAuth } from "next-auth/middleware"
+import { withAuth } from "next-auth/middleware";
 
 export default withAuth({
   pages: {
     signIn: "/auth/signin",
   },
-})
+});
 
 export const config = {
-  matcher: ["/user/:path*"],
-}
+  matcher: [], // No paths matched = no auth checks
+};
+
